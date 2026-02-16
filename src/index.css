@@ -1,0 +1,7 @@
+@import './nullstyle.css';
+body{
+    background-color: #1C1B1F;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
