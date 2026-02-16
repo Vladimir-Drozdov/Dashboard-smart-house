@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit';
-
+import { BASE_PATH } from './config.js';
 export class BaseCard extends LitElement {
   static properties = { 
     active: { type: Boolean },
@@ -62,7 +62,7 @@ export class BaseCard extends LitElement {
       width: 64px;
       height: 64px;
       border-radius: 20px;
-      background-image: url("/climate-icons/icon_more.png");
+      background-image: url("${BASE_PATH}/climate-icons/icon_more.png");
       border: 1px solid #4d4a54;
       display: flex;
       align-items: center;
@@ -82,7 +82,7 @@ export class BaseCard extends LitElement {
     return html`
       <div class="header">
         <div class="icon ${this.active ? 'active' : ''}" @click=${this.toggle}>
-          <img src="/climate-icons/device_thermostat.png" alt="">
+          <img src="${BASE_PATH}/climate-icons/device_thermostat.png" alt="">
         </div>
         <div class="info">
           <div class="title">${this.title}</div>

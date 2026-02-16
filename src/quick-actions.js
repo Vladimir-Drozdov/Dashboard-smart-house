@@ -93,13 +93,13 @@ export class QuickActions extends LitElement {
   constructor() {
     super();
     this.actions = [
-      { id: 'left', icon: '/icons/door_front.png', label: 'Ушли из дома', lines: 1, group: 'presence' },
-      { id: 'arrived', icon: '/icons/door_open.png', label: 'Пришли домой', lines: 1, group: 'presence' },
-      { id: 'yard-light', icon: '/icons/lightbulb_outline.png', label: 'Освещение\nво дворе', lines: 2, group: null },
-      { id: 'gate', icon: '/icons/view_carousel.png', label: 'Заблокировать\nворота', lines: 2, group: null },
-      { id: 'comfort1', icon: '/icons/device_thermostat.png', label: '«Комфорт»\nв детской №1', lines: 2, group: null },
-      { id: 'comfort2', icon: '/icons/device_thermostat.png', label: '«Комфорт»\nв детской №2', lines: 2, group: null },
-      { id: 'comfort3', icon: '/icons/device_thermostat.png', label: '«Комфорт»\nв детской №3', lines: 3, group: null }
+      { id: 'left', icon: '${BASE_PATH}/icons/door_front.png', label: 'Ушли из дома', lines: 1, group: 'presence' },
+      { id: 'arrived', icon: '${BASE_PATH}/icons/door_open.png', label: 'Пришли домой', lines: 1, group: 'presence' },
+      { id: 'yard-light', icon: '${BASE_PATH}/icons/lightbulb_outline.png', label: 'Освещение\nво дворе', lines: 2, group: null },
+      { id: 'gate', icon: '${BASE_PATH}/icons/view_carousel.png', label: 'Заблокировать\nворота', lines: 2, group: null },
+      { id: 'comfort1', icon: '${BASE_PATH}/icons/device_thermostat.png', label: '«Комфорт»\nв детской №1', lines: 2, group: null },
+      { id: 'comfort2', icon: '${BASE_PATH}/icons/device_thermostat.png', label: '«Комфорт»\nв детской №2', lines: 2, group: null },
+      { id: 'comfort3', icon: '${BASE_PATH}/icons/device_thermostat.png', label: '«Комфорт»\nв детской №3', lines: 2, group: null }
     ];
 
     this.activeActions = new Set();
