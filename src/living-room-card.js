@@ -28,7 +28,6 @@ export class LivingRoomCard extends LitElement {
       min-height: 0;
       height:250px;
       margin-bottom: 16px;
-      border:1px solid red;
     }
 
     .actions-wrapper {

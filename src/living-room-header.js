@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import { BASE_PATH } from './config.js';
 
 export class LivingRoomHeader extends LitElement {
   static styles = css`
@@ -11,16 +12,12 @@ export class LivingRoomHeader extends LitElement {
         height:100%;
         box-sizing:border-box;
         position: relative;
-        background-image: 
-        linear-gradient(90deg, #222222 17.93%, rgba(34, 34, 34, 0) 98.51%),
-        url('/images/renessans-park6.png');
         background-size: cover;
         background-position: center;
         padding: 16px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        border:1px solid green;
     }
 
     .title {
@@ -80,7 +77,6 @@ export class LivingRoomHeader extends LitElement {
       border-radius: 100px;
       position: relative;
       z-index: 2;
-      border: 1px solid red;
     }
 
     .extra-images div::after {
@@ -127,7 +123,7 @@ export class LivingRoomHeader extends LitElement {
 
   render() {
     return html`
-      <div class="header">
+      <div class="header" style="background-image: linear-gradient(90deg, #222222 17.93%, rgba(34, 34, 34, 0) 98.51%), url('${BASE_PATH}/images/renessans-park6.png');">
         <div class="title">
           <h2>Гостиная</h2>
         </div>
@@ -135,22 +131,22 @@ export class LivingRoomHeader extends LitElement {
         <div class="image-container">
           <div class="extra-images">
             <div>
-              <img src="/images/person1.png" alt="Аватарка №1">
+              <img src="${BASE_PATH}/images/person1.png" alt="Аватарка №1">
             </div>
             <div>
-              <img src="/images/person2.png" alt="Аватарка №2">
+              <img src="${BASE_PATH}/images/person2.png" alt="Аватарка №2">
             </div>
           </div>
 
           <div class="extra-icons">
             <div class="extra-icon">
-              <img src="/images/add.png" alt="add">
+              <img src="${BASE_PATH}/images/add.png" alt="add">
             </div>
             <div class="extra-icon">
-              <img src="/images/video.png" alt="video">
+              <img src="${BASE_PATH}/images/video.png" alt="video">
             </div>
             <div class="extra-icon">
-              <img src="/images/shield-tick.png" alt="shield-tick">
+              <img src="${BASE_PATH}/images/shield-tick.png" alt="shield-tick">
             </div>
           </div>
         </div>

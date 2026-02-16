@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { BASE_PATH } from '../config.js';
+
 export class BaseCard extends LitElement {
   static properties = { 
     active: { type: Boolean },
@@ -38,7 +39,6 @@ export class BaseCard extends LitElement {
       object-fit: contain;
     }
 
-
     .icon.active {
       background-color: #e65332;
     }
@@ -62,12 +62,14 @@ export class BaseCard extends LitElement {
       width: 64px;
       height: 64px;
       border-radius: 20px;
-      background-image: url("${BASE_PATH}/climate-icons/icon_more.png");
       border: 1px solid #4d4a54;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 64px;
     }
   `;
 
@@ -88,7 +90,7 @@ export class BaseCard extends LitElement {
           <div class="title">${this.title}</div>
           <div class="room">${this.room}</div>
         </div>
-        <div class="more"></div>
+        <div class="more" style="background-image: url('${BASE_PATH}/climate-icons/icon_more.png')"></div>
       </div>
     `;
   }
