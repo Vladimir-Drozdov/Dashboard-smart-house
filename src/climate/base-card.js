@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit';
-import { BASE_PATH } from './config.js';
+import { BASE_PATH } from '../config.js';
 export class BaseCard extends LitElement {
   static properties = { 
     active: { type: Boolean },
